@@ -78,8 +78,8 @@ def button_increase_callback(channel):
 
 
 
-GPIO.add_event_detect(16, GPIO.RISING, callback = button_decrease_callback)	# Set event up on pin 16 for rising edges
-GPIO.add_event_detect(18, GPIO.RISING, callback = button_increase_callback)	# Set event up on pin 18 for rising edges
+GPIO.add_event_detect(16, GPIO.RISING, callback = button_decrease_callback, bouncetime=300)	# Set event up on pin 16 for rising edges
+GPIO.add_event_detect(18, GPIO.RISING, callback = button_increase_callback, bouncetime=300)	# Set event up on pin 18 for rising edges
 
 
 
